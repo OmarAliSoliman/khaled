@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=Tajawal&display=swap";
 @font-face {
   font-family: myFont;
@@ -5,7 +6,8 @@
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 0 !important; }
+  outline: 0 !important;
+  box-shadow: none !important; }
 
 body {
   direction: rtl;
@@ -205,7 +207,8 @@ body {
       font-weight: bold;
       height: 100%; }
     .services .card h5 {
-      font-size: 20px; }
+      font-size: 20px;
+      font-weight: bold; }
       .services .card h5 a {
         color: #000;
         text-decoration: none; }
@@ -244,10 +247,13 @@ body {
     .project .tabs-projects .project-slider {
       margin-top: 40px; }
       .project .tabs-projects .project-slider img {
-        width: 365px;
+        width: 100%;
+        max-width: 100%;
         margin: auto; }
       .project .tabs-projects .project-slider .item-slider {
-        position: relative; }
+        cursor: pointer;
+        position: relative;
+        padding: 0 5px; }
         .project .tabs-projects .project-slider .item-slider:focus {
           outline: 0 !important; }
         .project .tabs-projects .project-slider .item-slider .overlay {
@@ -335,7 +341,8 @@ body {
         text-align: right;
         left: 130px; }
   .project-details .det {
-    margin-top: 20px; }
+    margin-top: 20px;
+    text-align: right; }
     .project-details .det h6 {
       font-size: 17px;
       font-weight: bold; }
@@ -391,7 +398,8 @@ body {
 
 .types .row {
   margin: 0 !important; }
-  .types .row .col-lg-6, .types .row .col-sm-12 {
+  .types .row .col-lg-6,
+  .types .row .col-sm-12 {
     padding: 0 !important; }
 .types .pricing {
   background-color: #c71e24;
@@ -473,7 +481,7 @@ footer {
   footer ul {
     margin-top: 15px; }
     footer ul li {
-      transition: all .5s linear; }
+      transition: all 0.5s linear; }
       footer ul li:hover {
         transform: translateX(-5px) !important; }
       footer ul li a {
@@ -510,6 +518,384 @@ footer {
     .copy .logo-funun img {
       width: 30%; }
 
+.who-us-page {
+  margin-bottom: 90px; }
+  .who-us-page .header {
+    background-image: url("../images/header-page.png");
+    height: 300px;
+    background-size: cover;
+    text-align: center; }
+    .who-us-page .header .content {
+      padding-top: 130px; }
+      .who-us-page .header .content h5 {
+        font-size: 40px;
+        font-weight: bold;
+        color: #c71e24; }
+  .who-us-page .who-us-page-content {
+    margin-top: 90px; }
+    .who-us-page .who-us-page-content .who-us-page-content-par h5 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #c71e24; }
+    .who-us-page .who-us-page-content .who-us-page-content-par p {
+      margin-top: 20px; }
+    .who-us-page .who-us-page-content .who-us-page-content-img img {
+      width: 100%;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out; }
+      .who-us-page .who-us-page-content .who-us-page-content-img img:hover {
+        border-radius: 0; }
+    .who-us-page .who-us-page-content .who-us-pag-content-par2 {
+      margin-top: 50px; }
+  .who-us-page .who-us-page-content-3 {
+    margin-top: 60px; }
+
+.services-page .services-page-head {
+  margin-top: 90px; }
+  .services-page .services-page-head h5 {
+    font-size: 33px;
+    text-align: center;
+    font-weight: bold;
+    max-width: 50%;
+    margin: auto; }
+    .services-page .services-page-head h5 span {
+      color: #c71e24; }
+
+.services-in-servise-page {
+  height: auto;
+  background-image: none;
+  margin-bottom: 90px;
+  padding-top: 0; }
+  .services-in-servise-page .card {
+    margin-top: 20px; }
+
+.single-serv-img {
+  margin-top: -150px; }
+  .single-serv-img img {
+    width: 100%; }
+
+.single-serv-content {
+  margin-top: 90px; }
+  .single-serv-content .single-serv-content-head {
+    margin-bottom: 60px; }
+    .single-serv-content .single-serv-content-head h5 {
+      font-size: 33px;
+      text-align: center;
+      font-weight: bold;
+      max-width: 50%;
+      margin: auto;
+      margin-bottom: 55px; }
+      .single-serv-content .single-serv-content-head h5 span {
+        color: #c71e24; }
+  .single-serv-content .card {
+    border: 0 !important;
+    margin-top: 10px; }
+    .single-serv-content .card img {
+      width: 100%; }
+  .single-serv-content .single-serv-par2 {
+    margin-top: 80px;
+    margin-bottom: 90px; }
+
+.project-inforamtion {
+  margin-top: 80px; }
+  .project-inforamtion .project-information-content-data {
+    background-color: #f8f8f8;
+    padding: 25px; }
+    .project-inforamtion .project-information-content-data .data-info > div {
+      float: right;
+      position: relative; }
+      .project-inforamtion .project-information-content-data .data-info > div h6,
+      .project-inforamtion .project-information-content-data .data-info > div p {
+        margin: 0;
+        padding: 0; }
+      .project-inforamtion .project-information-content-data .data-info > div h6 {
+        font-size: 15px;
+        font-weight: bold; }
+    .project-inforamtion .project-information-content-data .data-info div:last-child {
+      margin-right: 130px; }
+
+.single-project-img .single-serv-par2 {
+  margin-top: 20px; }
+
+.related-project {
+  margin-bottom: 90px;
+  margin-top: 50px; }
+  .related-project h5 {
+    font-weight: bold;
+    margin-bottom: 30px; }
+  .related-project .card {
+    border: 0 !important;
+    margin-top: 10px; }
+    .related-project .card img {
+      width: 100%;
+      margin: auto; }
+
+.how-work-page .header {
+  background-image: url("../images/how-work.jpg");
+  height: 300px;
+  background-size: cover;
+  text-align: center; }
+  .how-work-page .header .content {
+    padding-top: 130px; }
+    .how-work-page .header .content h5 {
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff; }
+
+.steps-clean {
+  padding-top: 100px;
+  padding-bottom: 90px;
+  text-align: center; }
+  .steps-clean .serv-header {
+    margin-bottom: 60px; }
+    .steps-clean .serv-header h5,
+    .steps-clean .serv-header p {
+      margin: 0; }
+    .steps-clean .serv-header h5 {
+      font-size: 30px;
+      color: #000;
+      font-weight: bold; }
+      .steps-clean .serv-header h5 span {
+        color: #c71e24; }
+    .steps-clean .serv-header p {
+      margin-top: 20px;
+      margin-bottom: 50px; }
+  .steps-clean .card {
+    background-color: transparent;
+    position: relative;
+    border: 0; }
+    .steps-clean .card .img-steps {
+      width: 70px;
+      height: 70px;
+      margin: auto;
+      margin-bottom: 10px;
+      border-radius: 50%; }
+    .steps-clean .card h6 {
+      border: 1px solid #c71e24;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #c71e24;
+      margin: auto;
+      color: #fff;
+      line-height: 40px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: bold; }
+    .steps-clean .card p {
+      color: #000;
+      width: 70%;
+      margin: auto;
+      margin-top: 15px;
+      font-size: 13px;
+      font-weight: bold; }
+    .steps-clean .card .line {
+      position: absolute;
+      top: -3%;
+      left: -43%;
+      width: 70%; }
+    .steps-clean .card .line-down {
+      top: 20% !important;
+      left: -40%; }
+
+.what-papper {
+  margin-top: 40px;
+  margin-bottom: 90px; }
+  .what-papper h5 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center; }
+    .what-papper h5 span {
+      color: #c71e24; }
+  .what-papper .list ul li {
+    font-size: 18px;
+    margin-top: 8px; }
+    .what-papper .list ul li::before {
+      content: "\f137";
+      font-size: 12px !important;
+      margin-left: 5px; }
+
+.pricing-page .header {
+  text-align: center;
+  background-image: linear-gradient(to bottom, #6a1013, #ab181e);
+  height: 400px; }
+  .pricing-page .header .content {
+    padding-top: 100px;
+    color: #fff; }
+    .pricing-page .header .content h5 {
+      font-size: 35px;
+      margin-bottom: 20px; }
+
+.pricing-form {
+  margin-bottom: 120px; }
+  .pricing-form form {
+    background-color: #fff;
+    margin-top: -120px;
+    padding: 40px;
+    box-shadow: 0 3px 68px rgba(0, 0, 0, 0.2);
+    padding-bottom: 80px !important; }
+    .pricing-form form .form-group {
+      width: 50% !important;
+      margin: auto;
+      float: right;
+      padding: 10px; }
+      .pricing-form form .form-group label {
+        font-weight: bold; }
+      .pricing-form form .form-group .form-control {
+        height: calc(1.5em + 0.75rem + 20px);
+        border: 1px solid #d1d1d1;
+        border-radius: 5px;
+        font-size: 20px; }
+        .pricing-form form .form-group .form-control:focus {
+          box-shadow: none !important;
+          outline: 0 !important; }
+    .pricing-form form .btn-submit {
+      text-align: center;
+      margin-top: 30px; }
+      .pricing-form form .btn-submit .btn {
+        background-color: #c71e24;
+        width: 200px;
+        color: #fff;
+        padding: 15px; }
+
+.hiring-page .header {
+  background-image: linear-gradient(to bottom, #000, #000) !important; }
+
+.hiring-form form .form-group-file {
+  width: 100% !important; }
+  .hiring-form form .form-group-file .label-file {
+    font-weight: bold; }
+  .hiring-form form .form-group-file .custom-file-label {
+    height: calc(1.5em + 0.75rem + 20px);
+    line-height: calc(1.5em + 0.75rem + 5px); }
+  .hiring-form form .form-group-file .custom-file-input:lang(en) ~ .custom-file-label::after {
+    content: "ارفع";
+    color: #c71e24;
+    background-color: transparent !important;
+    border: 0;
+    line-height: calc(1.5em + 0.75rem + 5px); }
+
+.list-contact .ifrema-map {
+  margin-top: -200px; }
+.list-contact .contact-information .card {
+  border: 0;
+  margin-top: 35px;
+  border-right: 1px solid #f5f5f5;
+  border-radius: 0; }
+  .list-contact .contact-information .card .header-i {
+    font-size: 30px;
+    color: #c71e24;
+    margin-bottom: 10px; }
+  .list-contact .contact-information .card h6 {
+    font-weight: bold; }
+  .list-contact .contact-information .card p {
+    margin: 0;
+    color: #444; }
+  .list-contact .contact-information .card .social {
+    margin-top: 15px; }
+    .list-contact .contact-information .card .social span a {
+      color: #444;
+      font-size: 25px;
+      margin-left: 10px; }
+.list-contact .contact-information .first-card {
+  border-right: 0 !important; }
+
+.form-contact-page {
+  margin-top: 90px;
+  margin-bottom: 110px; }
+  .form-contact-page form {
+    width: 100% !important;
+    background-color: #fff;
+    box-shadow: 0 2.9px 14.3px -13px rgba(0, 0, 0, 0.14), 0 23px 114px -13px rgba(0, 0, 0, 0.28);
+    padding: 20px;
+    padding-bottom: 70px; }
+    .form-contact-page form .form-group {
+      width: 33%;
+      float: right;
+      padding: 15px; }
+      .form-contact-page form .form-group label {
+        font-weight: bold; }
+      .form-contact-page form .form-group .form-control {
+        height: calc(1.5em + 0.75rem + 20px);
+        border: 1px solid #d1d1d1;
+        border-radius: 8px; }
+    .form-contact-page form .form-text-area {
+      width: 100% !important; }
+      .form-contact-page form .form-text-area .form-control {
+        height: calc(1.5em + 0.75rem + 200px) !important; }
+    .form-contact-page form .btn-submit {
+      text-align: center;
+      margin-top: 30px; }
+      .form-contact-page form .btn-submit .btn {
+        background-color: #c71e24;
+        width: 200px;
+        color: #fff;
+        padding: 15px; }
+
+.project-who-page {
+  margin-bottom: 0; }
+
+.projects-page {
+  margin-top: 50px; }
+  .projects-page .tab-project {
+    margin-top: 40px; }
+    .projects-page .tab-project .col-sm-12, .projects-page .tab-project .col-md-6, .projects-page .tab-project .col-lg-4 {
+      padding-left: 5px;
+      padding-right: 5px; }
+  .projects-page .tab-pane .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgba(199, 30, 36, 0.5);
+    text-align: center; }
+    .projects-page .tab-pane .overlay h5 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      color: #fff;
+      display: block !important;
+      font-size: 45px; }
+      .projects-page .tab-pane .overlay h5 a {
+        color: #fff;
+        text-decoration: none; }
+  .projects-page .tab-pane .card {
+    position: relative;
+    margin-top: 10px;
+    border: 0; }
+    .projects-page .tab-pane .card img {
+      width: 100%; }
+    .projects-page .tab-pane .card:hover .overlay {
+      opacity: 1; }
+  .projects-page .pagination {
+    width: 25%;
+    margin: auto;
+    padding-left: 120px;
+    padding-top: 30px;
+    margin-bottom: 90px; }
+    .projects-page .pagination .page-item .page-link {
+      background-color: #ebebeb !important;
+      padding: 0 !important;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 50%;
+      color: #000;
+      margin-right: 5px;
+      border: 1px solid #ebebeb; }
+    .projects-page .pagination .active .page-link {
+      background-color: #c71e24 !important;
+      border: 1px solid #c71e24 !important;
+      color: #fff; }
+
+@media (min-width: 2560px) {
+  .top-header .logo img {
+    right: 20%; } }
 @media (max-width: 1024px) {
   .top-header .navbar .navbar-nav .nav-item .nav-link {
     width: 68px;
@@ -523,7 +909,10 @@ footer {
   .project .slick-prev {
     left: -39px !important; }
   .project .slick-next {
-    right: -20px !important; } }
+    right: -20px !important; }
+
+  .project-inforamtion .project-information-content-data .data-info div:last-child {
+    margin-right: 76px; } }
 @media (max-width: 800px) {
   .top-header .top-header-information {
     float: none;
@@ -586,7 +975,37 @@ footer {
     height: auto; }
     .how-we-work .papper-need {
       padding-right: 0;
-      margin-top: 10px; } }
+      margin-top: 10px; }
+
+  .services-page .services-page-head h5 {
+    max-width: 100%; }
+
+  .single-serv-content-head h5 {
+    max-width: 100% !important; }
+
+  .steps-clean .serv-header p {
+    font-size: 14px;
+    margin-bottom: 66px; }
+  .steps-clean .card {
+    margin: 30px; }
+    .steps-clean .card .line-down {
+      display: none; }
+    .steps-clean .card .line {
+      left: -50%; }
+
+  .contact-information .card {
+    border-right: 0 !important;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f5f5f5 !important; }
+
+  .tab-project .card img {
+    margin: auto; }
+
+  .pagination {
+    width: 35% !important; }
+
+  .project-inforamtion .project-information-content-data .data-info div:last-child {
+    margin-right: 230px; } }
 @media (max-width: 524px) {
   .header-slider .header-slider-pic .item-slider .slider-caption .caption-header {
     font-size: 35px; }
@@ -653,7 +1072,36 @@ footer {
     float: right;
     margin-top: 15px; }
     .copy .logo-funun img {
-      width: 30%; } }
+      width: 30%; }
+
+  .steps-clean .card {
+    margin-top: 50px; }
+    .steps-clean .card .line {
+      display: none; }
+
+  .what-papper .list ul li {
+    font-size: 15px; }
+
+  .pricing-form form {
+    padding: 15px;
+    padding-top: 30px !important; }
+    .pricing-form form .form-group {
+      width: 100% !important; }
+
+  .form-contact-page .form-group {
+    width: 100% !important; }
+
+  .pagination {
+    width: 75% !important; }
+
+  .projects-page .tab-project {
+    margin-top: 40px; }
+    .projects-page .tab-project .col-sm-12, .projects-page .tab-project .col-md-6, .projects-page .tab-project .col-lg-4 {
+      padding-left: 19px;
+      padding-right: 19px; }
+
+  .project-inforamtion .project-information-content-data .data-info div:last-child {
+    margin-right: 130px; } }
 @media (max-width: 375px) {
   .top-header .top-header-information ul {
     overflow: visible; }
@@ -679,8 +1127,11 @@ footer {
       width: 15px;
       height: 15px;
       line-height: 15px;
-      font-size: 10px; } }
-.top-header .navbar .lang a:first-child::before, .top-header .navbar .lang a:last-child::before, .header-slider .slick-slider .slick-prev::before, .header-slider .slick-slider .slick-next::before, .project .tabs-projects .project-slider .item-slider:hover .overlay::after, .project .tabs-projects .project-slider .slick-current .overlay::after, .project .tabs-projects .project-slider .slick-prev::before, .project .tabs-projects .project-slider .slick-next::before, .how-we-work .step-before ul li::before, footer ul li::before {
+      font-size: 10px; }
+
+  .project-inforamtion .project-information-content-data .data-info div:last-child {
+    margin-right: 76px; } }
+.top-header .navbar .lang a:first-child::before, .top-header .navbar .lang a:last-child::before, .header-slider .slick-slider .slick-prev::before, .header-slider .slick-slider .slick-next::before, .project .tabs-projects .project-slider .item-slider:hover .overlay::after, .project .tabs-projects .project-slider .slick-current .overlay::after, .project .tabs-projects .project-slider .slick-prev::before, .project .tabs-projects .project-slider .slick-next::before, .how-we-work .step-before ul li::before, footer ul li::before, .what-papper .list ul li::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 10px; }
@@ -709,10 +1160,9 @@ footer {
 .project .tabs-projects .project-slider .item-slider .overlay {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 99%;
-  margin: auto;
-  height: 100%;
+  left: 5px;
+  bottom: 0;
+  right: 5px;
   background-color: rgba(199, 30, 36, 0.5); }
 
 /*# sourceMappingURL=style.css.map */
