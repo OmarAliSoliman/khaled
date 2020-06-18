@@ -28,11 +28,18 @@ body {
   clear: both;
 }
 
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
 // start top header
 .top-header {
   background-image: linear-gradient(to bottom, #fdfcfd, #f5f5f5);
   border-bottom: 3px solid $mainColor;
   position: relative;
+
   .top-header-information {
     background-color: #000;
     text-align: right;
@@ -44,8 +51,10 @@ body {
     clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
     margin-bottom: 60px;
     overflow: hidden;
+
     ul {
       overflow: hidden;
+
       li {
         display: inline;
         margin-left: 20px;
@@ -53,22 +62,27 @@ body {
         padding: 3px;
         padding-right: 20px;
         color: #fff;
+
         i {
           color: $mainColor;
           font-size: 13px;
         }
       }
+
       li:first-child {
         border-right: 0;
       }
+
       .info {
         span {
           font-size: 13px;
         }
+
         i {
           margin-right: 10px;
         }
       }
+
       .social {
         i {
           transition: all 0.5s ease-in-out;
@@ -78,6 +92,7 @@ body {
           line-height: 25px;
           border-radius: 50%;
           text-align: center;
+
           &:hover {
             background-color: $mainColor;
           }
@@ -85,6 +100,7 @@ body {
       }
     }
   }
+
   .logo {
     img {
       width: 220px;
@@ -92,14 +108,17 @@ body {
       top: 30px;
     }
   }
+
   .navbar {
     clip-path: polygon(0 0, 97% 0, 100% 100%, 0% 100%);
     background-color: #fff;
     width: 70%;
     float: left;
     padding: 0;
+
     .navbar-nav {
       text-align: center;
+
       .nav-item {
         .nav-link {
           width: 90px;
@@ -110,14 +129,17 @@ body {
           font-weight: bold;
         }
       }
+
       .active {
         border-top: 3px solid $mainColor;
+
         .nav-link {
           color: $mainColor;
           line-height: 15px;
         }
       }
     }
+
     .lang {
       a {
         margin-left: 20px;
@@ -128,13 +150,16 @@ body {
         height: 100%;
         color: #000;
       }
+
       .active {
         background-color: $mainColor;
         color: #fff;
+
         &::before {
           color: #fff;
         }
       }
+
       a:first-child {
         &::before {
           @extend %initlizeFonAwesomeAfter;
@@ -144,6 +169,7 @@ body {
           top: 40%;
         }
       }
+
       a:last-child {
         &::before {
           @extend %initlizeFonAwesomeAfter;
@@ -160,16 +186,41 @@ body {
 // start header pic slider
 .header-slider {
   .header-slider-pic {
+    .item-slider-video {
+      position: relative;
+      video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        // min-height: 100%;
+        // width: auto;
+        // height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+      }
+      .slider-caption {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
     .item-slider {
       height: 400px;
       background-size: cover;
+
       .slider-caption {
         text-align: center;
         padding-top: 70px;
+
         .caption-header {
           color: #fff;
           font-size: 50px;
           position: relative;
+
           &::after {
             position: absolute;
             content: url("../images/slider-after.png");
@@ -180,6 +231,7 @@ body {
             // background: #fff;
           }
         }
+
         .caption-par {
           max-width: 70%;
           margin: auto;
@@ -188,12 +240,14 @@ body {
           line-height: 30px;
         }
       }
+
       .slider-caption-slider-2-3 {
         .caption-header {
           &::after {
             right: 43%;
           }
         }
+
         .caption-par {
           max-width: 57% !important;
           margin: auto;
@@ -204,18 +258,22 @@ body {
       }
     }
   }
+
   .slick-slider {
     .slick-prev {
       left: 50px;
       z-index: 99;
+
       &::before {
         @extend %initlizeFonAwesomeAfter;
         @extend %headerArrows;
         content: "\f053";
       }
     }
+
     .slick-next {
       right: 50px;
+
       &::before {
         @extend %initlizeFonAwesomeAfter;
         @extend %headerArrows;
@@ -228,14 +286,18 @@ body {
 // start who us
 .who-us {
   margin-top: 40px;
+
   .who-header {
     text-align: center;
+
     h5 {
       @extend %sectionHeader;
+
       &::after {
         @extend %sectionHeaderAfter;
       }
     }
+
     p {
       margin-top: 30px;
       color: #555;
@@ -243,38 +305,47 @@ body {
       margin-bottom: 30px;
     }
   }
+
   .card {
     margin-top: 10px;
     text-align: center;
     padding-top: 50px;
     transition: all 0.2s linear;
     border: 1px solid #f3f3f3;
+
     i {
       color: $mainColor;
       font-size: 45px;
       margin-bottom: 10px;
     }
+
     h5 {
       font-weight: bold;
+
       a {
         color: #000;
       }
     }
+
     p {
       color: #555;
       line-height: 30px;
     }
+
     &:hover {
       border: 4px solid #f3f3f3;
       box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+
       i {
         color: #000;
       }
     }
   }
+
   .btn-more {
     text-align: center;
     margin-top: 50px;
+
     .btn {
       background-color: $mainColor;
       color: #fff;
@@ -292,15 +363,19 @@ body {
   background-image: url("../images/serv-pic.jpg");
   height: 640px;
   background-size: cover;
+
   .servises-header {
     text-align: center;
+
     h5 {
       @extend %sectionHeader;
+
       &::after {
         @extend %sectionHeaderAfter;
       }
     }
   }
+
   .card {
     padding-bottom: 30px;
     border: 0;
@@ -308,28 +383,35 @@ body {
     text-align: center;
     transition: all 0.5s linear;
     margin-top: 10px;
+
     img {
       margin-bottom: 20px;
       font-weight: bold;
-      height: 100%;
+      height: 190px;
     }
+
     h5 {
       font-size: 20px;
       font-weight: bold;
+
       a {
         color: #000;
         text-decoration: none;
       }
     }
+
     p {
       font-size: 14px;
     }
+
     .read-more {
       color: $mainColor !important;
       text-decoration: none;
     }
+
     &:hover {
       box-shadow: none;
+
       h5 {
         a {
           color: $mainColor;
@@ -342,21 +424,27 @@ body {
 // start project
 .project {
   margin-top: 90px;
+
   .project-header {
     text-align: center;
+
     h5 {
       @extend %sectionHeader;
+
       &::after {
         @extend %sectionHeaderAfter;
       }
     }
   }
+
   .tabs-projects {
     text-align: center;
     margin-top: 50px;
+
     .nav {
       width: 50%;
       margin: auto;
+
       .nav-item {
         .nav-link {
           background-color: #fff;
@@ -367,6 +455,7 @@ body {
           width: 100px;
           margin-left: 10px;
         }
+
         .active {
           background-color: $mainColor;
           border: 1px solid $mainColor;
@@ -377,23 +466,27 @@ body {
 
     .project-slider {
       margin-top: 40px;
+
       img {
-        width: 100%;
-        max-width: 100%;
         margin: auto;
+        height: 350px;
       }
+
       .item-slider {
         cursor: pointer;
         position: relative;
         padding: 0 5px;
+
         &:focus {
           outline: 0 !important;
         }
+
         .overlay {
           @extend %projectOverLay;
           transition: all 0.5s ease-in-out;
           opacity: 0;
           text-align: center;
+
           h5 {
             position: absolute;
             top: 50%;
@@ -403,14 +496,17 @@ body {
             color: #fff;
             display: block !important;
             font-size: 45px;
+
             a {
               color: #fff;
               text-decoration: none;
             }
           }
         }
+
         &:hover .overlay {
           opacity: 1;
+
           &::after {
             @extend %initlizeFonAwesomeAfter;
             content: "\f0de";
@@ -421,9 +517,11 @@ body {
           }
         }
       }
+
       .slick-current {
         .overlay {
           opacity: 1;
+
           &::after {
             @extend %initlizeFonAwesomeAfter;
             content: "\f0de";
@@ -434,17 +532,21 @@ body {
           }
         }
       }
+
       .slick-prev {
         left: -60px;
         z-index: 99;
+
         &::before {
           @extend %initlizeFonAwesomeAfter;
           @extend %headerArrows;
           content: "\f053";
         }
       }
+
       .slick-next {
         right: -50px;
+
         &::before {
           @extend %initlizeFonAwesomeAfter;
           @extend %headerArrows;
@@ -459,6 +561,7 @@ body {
       height: 0;
       opacity: 0;
       transition: opacity 0.3s ease;
+
       &.active {
         opacity: 1;
         height: auto;
@@ -479,30 +582,38 @@ body {
   background-color: #f9faf9;
   padding-bottom: 90px;
   padding-top: 50px;
+
   &:focus {
     outline: 0 !important;
   }
+
   .information {
     background-color: #fff;
     border-radius: 5px;
     padding-top: 20px;
     padding-bottom: 10px;
+
     .info1 {
       margin-top: 10px;
+
       h5 {
         font-size: 17px;
         font-weight: bold;
       }
+
       p {
         color: #555;
       }
-      & > div {
+
+      &>div {
         float: right;
         width: 150px;
       }
+
       div:first-child {
         margin-right: 20px;
       }
+
       div:last-child {
         position: absolute;
         text-align: right;
@@ -510,40 +621,50 @@ body {
       }
     }
   }
+
   .det {
     margin-top: 20px;
     text-align: right;
+
     h6 {
       font-size: 17px;
       font-weight: bold;
     }
+
     p {
       color: #555;
     }
   }
+
   .project-details-slider {
     .item-project-details {
       background-size: cover;
       height: 300px;
     }
+
     .slick-dots {
       top: 10px !important;
       text-align: right !important;
+
       li {
         width: 10px !important;
+
         button {
           width: 5px !important;
           height: 5px !important;
           background-color: #c7c7c7;
           border-radius: 50%;
+
           &::before {
             content: none !important;
           }
         }
       }
+
       .slick-active {
         button {
           background-color: $mainColor;
+
           &::before {
             content: none !important;
           }
@@ -559,28 +680,36 @@ body {
   background-size: cover;
   height: 550px;
   padding-top: 100px;
+
   .how-we-work-header {
     text-align: center;
+
     h5 {
       @extend %sectionHeader;
       color: #fff;
+
       &::after {
         @extend %sectionHeaderAfter;
         right: -5% !important;
       }
     }
   }
+
   .step-before {
     margin-top: 90px;
+
     h5 {
       color: $mainColor;
     }
+
     ul {
       margin-top: 20px;
+
       li {
         color: #fff;
         margin-top: 10px;
         font-size: 14px;
+
         &::before {
           @extend %initlizeFonAwesomeAfter;
           content: "\f137";
@@ -590,6 +719,7 @@ body {
       }
     }
   }
+
   .papper-need {
     padding-right: 50px;
   }
@@ -599,27 +729,33 @@ body {
 .types {
   .row {
     margin: 0 !important;
+
     .col-lg-6,
     .col-sm-12 {
       padding: 0 !important;
     }
   }
+
   .pricing {
     background-color: $mainColor;
     color: #fff;
     padding-top: 55px;
+
     .content {
       width: 80%;
       margin: auto;
       padding-bottom: 40px;
+
       h5 {
         @extend %sectionHeader;
         font-size: 22px !important;
       }
+
       p {
         font-size: 13px;
         margin-top: 15px;
       }
+
       .btn {
         background-color: #fff;
         color: $mainColor;
@@ -628,6 +764,7 @@ body {
       }
     }
   }
+
   .hiring {
     background-color: $seconColor !important;
   }
@@ -639,7 +776,8 @@ body {
   height: 600px;
   background-size: cover;
   text-align: center;
-  form {
+
+  .contact-form-home {
     width: 70%;
     margin: auto;
     margin-top: 80px;
@@ -648,14 +786,17 @@ body {
     background-color: #fff !important;
     box-shadow: 0 2.9px 14.3px -13px rgba(0, 0, 0, 0.14),
       0 23px 114px -13px rgba(0, 0, 0, 0.28);
+
     .section-header {
       margin-bottom: 20px;
+
       h4 {
         color: #000;
         line-height: 27px;
         font-weight: bold;
       }
     }
+
     .my-form-control {
       margin-top: 20px;
       border: 0;
@@ -664,6 +805,7 @@ body {
       padding: 10px;
       width: 30%;
     }
+
     .my-text-area {
       border: 0;
       border: 1px solid #d6d6d6;
@@ -673,6 +815,7 @@ body {
       width: 90%;
       margin-top: 20px;
     }
+
     .btn {
       border: 0;
       background-color: $mainColor;
@@ -683,6 +826,7 @@ body {
       padding: 10px;
       width: 200px;
       transition: all 1s linear;
+
       &:hover {
         background-color: #fff;
         color: $mainColor;
@@ -698,29 +842,37 @@ footer {
   background-color: #000;
   padding-bottom: 30px;
   color: #fff;
+
   .footer-headers {
     @extend %sectionHeader;
     font-size: 18px !important;
   }
+
   ul {
     margin-top: 15px;
+
     li {
       transition: all 0.5s linear;
+
       &:hover {
         transform: translateX(-5px) !important;
       }
+
       a {
         color: #a7a7a7;
         font-size: 14px;
         text-decoration: none !important;
+
         &:hover {
           color: #a7a7a7 !important;
         }
+
         i {
           font-size: 10px;
           margin-left: 5px;
         }
       }
+
       &::before {
         @extend %initlizeFonAwesomeAfter;
         content: "\f053";
@@ -730,6 +882,7 @@ footer {
       }
     }
   }
+
   .contact-us {
     ul {
       li {
@@ -746,6 +899,7 @@ footer {
   background-color: #101010;
   padding: 10px;
   position: relative;
+
   h5 {
     margin: 0;
     font-size: 15px;
@@ -753,12 +907,15 @@ footer {
     margin-top: 20px;
     float: right;
   }
+
   .logo-funun {
     text-align: left;
     width: 40%;
     float: left;
+
     img {
       width: 30%;
+      height: 50px;
     }
   }
 }
@@ -766,11 +923,13 @@ footer {
 // start who-us
 .who-us-page {
   margin-bottom: 90px;
+
   .header {
     background-image: url("../images/header-page.png");
     height: 300px;
     background-size: cover;
     text-align: center;
+
     .content {
       // display: flex;
       // position: absolute;
@@ -786,32 +945,40 @@ footer {
       }
     }
   }
+
   .who-us-page-content {
     margin-top: 90px;
+
     .who-us-page-content-par {
       h5 {
         font-size: 30px;
         font-weight: bold;
         color: $mainColor;
       }
+
       p {
         margin-top: 20px;
       }
     }
+
     .who-us-page-content-img {
       img {
         width: 100%;
         border-radius: 5px;
+        height: 450px;
         transition: all 0.5s ease-in-out;
+
         &:hover {
           border-radius: 0;
         }
       }
     }
+
     .who-us-pag-content-par2 {
       margin-top: 50px;
     }
   }
+
   .who-us-page-content-3 {
     margin-top: 60px;
   }
@@ -821,12 +988,14 @@ footer {
 .services-page {
   .services-page-head {
     margin-top: 90px;
+
     h5 {
       font-size: 33px;
       text-align: center;
       font-weight: bold;
       max-width: 50%;
       margin: auto;
+
       span {
         color: $mainColor;
       }
@@ -839,6 +1008,7 @@ footer {
   background-image: none;
   margin-bottom: 90px;
   padding-top: 0;
+
   .card {
     margin-top: 20px;
   }
@@ -847,15 +1017,19 @@ footer {
 // start single serv
 .single-serv-img {
   margin-top: -150px;
+
   img {
     width: 100%;
+    height: 400px;
   }
 }
 
 .single-serv-content {
   margin-top: 90px;
+
   .single-serv-content-head {
     margin-bottom: 60px;
+
     h5 {
       font-size: 33px;
       text-align: center;
@@ -863,18 +1037,23 @@ footer {
       max-width: 50%;
       margin: auto;
       margin-bottom: 55px;
+
       span {
         color: $mainColor;
       }
     }
   }
+
   .card {
     border: 0 !important;
     margin-top: 10px;
+
     img {
       width: 100%;
+      height: 250px;
     }
   }
+
   .single-serv-par2 {
     margin-top: 80px;
     margin-bottom: 90px;
@@ -884,23 +1063,28 @@ footer {
 // .single project
 .project-inforamtion {
   margin-top: 80px;
+
   .project-information-content-data {
     background-color: #f8f8f8;
     padding: 25px;
+
     .data-info {
-      & > div {
+      &>div {
         float: right;
         position: relative;
+
         h6,
         p {
           margin: 0;
           padding: 0;
         }
+
         h6 {
           font-size: 15px;
           font-weight: bold;
         }
       }
+
       div:last-child {
         // position: absolute;
         // left: 40px;
@@ -916,19 +1100,24 @@ footer {
     margin-top: 20px;
   }
 }
+
 .related-project {
   margin-bottom: 90px;
   margin-top: 50px;
+
   h5 {
     font-weight: bold;
     margin-bottom: 30px;
   }
+
   .card {
     border: 0 !important;
     margin-top: 10px;
+
     img {
       width: 100%;
       margin: auto;
+      height: 350px;
     }
   }
 }
@@ -940,6 +1129,7 @@ footer {
     height: 300px;
     background-size: cover;
     text-align: center;
+
     .content {
       // display: flex;
       // position: absolute;
@@ -947,6 +1137,7 @@ footer {
       // left: 50%;
       // transform: translate(-50%, -50%);
       padding-top: 130px;
+
       h5 {
         font-size: 40px;
         font-weight: bold;
@@ -961,29 +1152,36 @@ footer {
   padding-top: 100px;
   padding-bottom: 90px;
   text-align: center;
+
   .serv-header {
     margin-bottom: 60px;
+
     h5,
     p {
       margin: 0;
     }
+
     h5 {
       font-size: 30px;
       color: #000;
       font-weight: bold;
+
       span {
         color: $mainColor;
       }
     }
+
     p {
       margin-top: 20px;
       margin-bottom: 50px;
     }
   }
+
   .card {
     background-color: transparent;
     position: relative;
     border: 0;
+
     .img-steps {
       width: 70px;
       height: 70px;
@@ -991,6 +1189,7 @@ footer {
       margin-bottom: 10px;
       border-radius: 50%;
     }
+
     h6 {
       border: 1px solid $mainColor;
       width: 40px;
@@ -1004,6 +1203,7 @@ footer {
       font-size: 15px;
       font-weight: bold;
     }
+
     p {
       color: #000;
       width: 70%;
@@ -1012,12 +1212,14 @@ footer {
       font-size: 13px;
       font-weight: bold;
     }
+
     .line {
       position: absolute;
       top: -3%;
       left: -43%;
       width: 70%;
     }
+
     .line-down {
       top: 20% !important;
       left: -40%;
@@ -1028,20 +1230,24 @@ footer {
 .what-papper {
   margin-top: 40px;
   margin-bottom: 90px;
+
   h5 {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 30px;
     text-align: center;
+
     span {
       color: $mainColor;
     }
   }
+
   .list {
     ul {
       li {
         font-size: 18px;
         margin-top: 8px;
+
         &::before {
           @extend %initlizeFonAwesomeAfter;
           content: "\f137";
@@ -1059,11 +1265,13 @@ footer {
     .content {
       padding-top: 100px;
       color: #fff;
+
       h5 {
         font-size: 35px;
         margin-bottom: 20px;
       }
     }
+
     text-align: center;
     background-image: linear-gradient(to bottom, #6a1013, #ab181e);
     height: 400px;
@@ -1072,34 +1280,41 @@ footer {
 
 .pricing-form {
   margin-bottom: 120px;
-  form {
+
+  .pricing-form-page {
     background-color: #fff;
     margin-top: -120px;
     padding: 40px;
     box-shadow: 0 3px 68px rgba(0, 0, 0, 0.2);
     padding-bottom: 80px !important;
+
     .form-group {
       width: 50% !important;
       margin: auto;
       float: right;
       padding: 10px;
+
       label {
         font-weight: bold;
       }
+
       .form-control {
         height: calc(1.5em + 0.75rem + 20px);
         border: 1px solid #d1d1d1;
         border-radius: 5px;
         font-size: 20px;
+
         &:focus {
           box-shadow: none !important;
           outline: 0 !important;
         }
       }
     }
+
     .btn-submit {
       text-align: center;
       margin-top: 30px;
+
       .btn {
         background-color: $mainColor;
         width: 200px;
@@ -1116,18 +1331,22 @@ footer {
     background-image: linear-gradient(to bottom, #000, #000) !important;
   }
 }
+
 .hiring-form {
-  form {
+  .hiring-form-page {
     .form-group-file {
       width: 100% !important;
+
       .label-file {
         font-weight: bold;
       }
+
       .custom-file-label {
         height: calc(1.5em + 0.75rem + 20px);
         line-height: calc(1.5em + 0.75rem + 5px);
       }
-      .custom-file-input:lang(en) ~ .custom-file-label::after {
+
+      .custom-file-input:lang(en)~.custom-file-label::after {
         content: "ارفع";
         color: $mainColor;
         background-color: transparent !important;
@@ -1142,26 +1361,32 @@ footer {
   .ifrema-map {
     margin-top: -200px;
   }
+
   .contact-information {
     .card {
       border: 0;
       margin-top: 35px;
       border-right: 1px solid #f5f5f5;
       border-radius: 0;
+
       .header-i {
         font-size: 30px;
         color: $mainColor;
         margin-bottom: 10px;
       }
+
       h6 {
         font-weight: bold;
       }
+
       p {
         margin: 0;
         color: #444;
       }
+
       .social {
         margin-top: 15px;
+
         span {
           a {
             color: #444;
@@ -1171,6 +1396,7 @@ footer {
         }
       }
     }
+
     .first-card {
       border-right: 0 !important;
     }
@@ -1180,35 +1406,43 @@ footer {
 .form-contact-page {
   margin-top: 90px;
   margin-bottom: 110px;
-  form {
+
+  .my-contact-form {
     width: 100% !important;
     background-color: #fff;
     box-shadow: 0 2.9px 14.3px -13px rgba(0, 0, 0, 0.14),
       0 23px 114px -13px rgba(0, 0, 0, 0.28);
     padding: 20px;
     padding-bottom: 70px;
+
     .form-group {
       width: 33%;
       float: right;
       padding: 15px;
+
       label {
         font-weight: bold;
       }
+
       .form-control {
         height: calc(1.5em + 0.75rem + 20px);
         border: 1px solid #d1d1d1;
         border-radius: 8px;
       }
     }
+
     .form-text-area {
       width: 100% !important;
+
       .form-control {
         height: calc(1.5em + 0.75rem + 200px) !important;
       }
     }
+
     .btn-submit {
       text-align: center;
       margin-top: 30px;
+
       .btn {
         background-color: $mainColor;
         width: 200px;
@@ -1223,15 +1457,21 @@ footer {
 .project-who-page {
   margin-bottom: 0;
 }
+
 .projects-page {
   margin-top: 50px;
+
   .tab-project {
     margin-top: 40px;
-    .col-sm-12, .col-md-6, .col-lg-4{
+
+    .col-sm-12,
+    .col-md-6,
+    .col-lg-4 {
       padding-left: 5px;
       padding-right: 5px;
     }
   }
+
   .tab-pane {
     .overlay {
       position: absolute;
@@ -1244,6 +1484,7 @@ footer {
       opacity: 0;
       background-color: rgba(199, 30, 36, 0.5);
       text-align: center;
+
       h5 {
         position: absolute;
         top: 50%;
@@ -1253,30 +1494,37 @@ footer {
         color: #fff;
         display: block !important;
         font-size: 45px;
+
         a {
           color: #fff;
           text-decoration: none;
         }
       }
     }
+
     .card {
       position: relative;
       margin-top: 10px;
       border: 0;
+
       img {
         width: 100%;
+        height: 350px;
       }
+
       &:hover .overlay {
         opacity: 1;
       }
     }
   }
+
   .pagination {
     width: 25%;
     margin: auto;
     padding-left: 120px;
     padding-top: 30px;
     margin-bottom: 90px;
+
     .page-item {
       .page-link {
         background-color: #ebebeb !important;
@@ -1290,6 +1538,7 @@ footer {
         border: 1px solid #ebebeb;
       }
     }
+
     .active {
       .page-link {
         background-color: $mainColor !important;
@@ -1320,25 +1569,30 @@ footer {
       }
     }
   }
+
   .project {
     .tabs-projects {
       .nav {
         width: 60% !important;
       }
+
       .project-slider {
         img {
-          width: 305px;
+          // width: 305px;
         }
       }
     }
+
     .slick-prev {
       left: -39px !important;
     }
+
     .slick-next {
       right: -20px !important;
     }
   }
-  .project-inforamtion .project-information-content-data .data-info div:last-child{
+
+  .project-inforamtion .project-information-content-data .data-info div:last-child {
     margin-right: 76px;
   }
 }
@@ -1351,8 +1605,10 @@ footer {
       text-align: left;
       clip-path: none;
       margin-bottom: 0;
+
       ul {
         margin-bottom: 0;
+
         li {
           margin-left: 0;
           padding-right: 0;
@@ -1361,37 +1617,45 @@ footer {
         }
       }
     }
+
     .logo {
       margin: 10px 0px 10px 0px;
+
       img {
         position: inherit;
         width: 150px;
       }
     }
+
     .navbar {
       float: none;
       width: 100%;
       text-align: left;
       clip-path: none;
+
       .navbar-nav {
         text-align: right;
       }
+
       .lang {
         text-align: right;
       }
     }
   }
+
   .header-slider {
     .header-slider-pic {
       .item-slider {
         .slider-caption {
           .caption-header {
             font-size: 48px;
+
             &::after {
               right: 35%;
             }
           }
         }
+
         .slider-caption-slider-2-3 {
           .caption-header {
             &::after {
@@ -1402,31 +1666,38 @@ footer {
       }
     }
   }
+
   .services {
     height: auto;
     padding-bottom: 30px;
   }
+
   .project {
     .tabs-projects {
       .nav {
         width: 80% !important;
       }
+
       .project-slider {
         img {
-          width: 340px;
+          // width: 340px;
         }
       }
     }
+
     .slick-prev {
       left: -35px !important;
+
       &::before {
         width: 35px !important;
         height: 35px !important;
         line-height: 35px !important;
       }
     }
+
     .slick-next {
       right: -20px !important;
+
       &::before {
         width: 35px !important;
         height: 35px !important;
@@ -1434,14 +1705,17 @@ footer {
       }
     }
   }
+
   .how-we-work {
     padding-bottom: 25px;
     height: auto;
+
     .papper-need {
       padding-right: 0;
       margin-top: 10px;
     }
   }
+
   .services-page {
     .services-page-head {
       h5 {
@@ -1449,11 +1723,13 @@ footer {
       }
     }
   }
+
   .single-serv-content-head {
     h5 {
       max-width: 100% !important;
     }
   }
+
   // .who-us-page .header {
   //   text-align: center;
   //   .content {
@@ -1469,16 +1745,20 @@ footer {
         margin-bottom: 66px;
       }
     }
+
     .card {
       margin: 30px;
+
       .line-down {
         display: none;
       }
+
       .line {
         left: -50%;
       }
     }
   }
+
   .contact-information {
     .card {
       border-right: 0 !important;
@@ -1486,6 +1766,7 @@ footer {
       border-bottom: 1px solid #f5f5f5 !important;
     }
   }
+
   .tab-project {
     .card {
       img {
@@ -1494,10 +1775,12 @@ footer {
       }
     }
   }
+
   .pagination {
     width: 35% !important;
   }
-  .project-inforamtion .project-information-content-data .data-info div:last-child{
+
+  .project-inforamtion .project-information-content-data .data-info div:last-child {
     margin-right: 230px;
   }
 }
@@ -1505,20 +1788,33 @@ footer {
 @media (max-width: 524px) {
   .header-slider {
     .header-slider-pic {
+      .item-slider-video {
+        overflow: hidden;
+        video {
+          width: 200%;
+        }
+        .slider-caption {
+          position: relative;
+          z-index: 2;
+        }
+      }
       .item-slider {
         .slider-caption {
           .caption-header {
             font-size: 35px;
+
             &::after {
               right: 24%;
             }
           }
+
           .caption-par {
             max-width: 100%;
             font-size: 14px;
             margin-top: 65px;
           }
         }
+
         .slider-caption-slider-2-3 {
           .caption-header {
             &::after {
@@ -1528,55 +1824,67 @@ footer {
         }
       }
     }
+
     .slick-slider {
       .slick-prev {
         left: 30px;
       }
+
       .slick-next {
         right: 30px;
       }
     }
   }
+
   .services {
     height: auto;
+
     .card {
       width: 80%;
       margin: auto;
       margin-top: 10px;
     }
   }
+
   .project {
     .tabs-projects {
       .nav {
         width: 76% !important;
         white-space: nowrap;
         margin-bottom: 20px !important;
+
         .nav-item {
           width: 300px;
+
           .nav-link {
             width: 100%;
             margin-top: 10px;
           }
         }
       }
+
       .project-slider {
         img {
           width: 389px;
         }
       }
     }
+
     .slick-prev {
       top: -28px;
       left: 0px !important;
+
       &::before {
         width: 35px !important;
         height: 35px !important;
         line-height: 35px !important;
       }
     }
+
     .slick-next {
       top: -28px;
       right: 11px !important;
+
       &::before {
         width: 35px !important;
         height: 35px !important;
@@ -1584,6 +1892,7 @@ footer {
       }
     }
   }
+
   .project-details {
     .information {
       .info1 div:last-child {
@@ -1591,35 +1900,43 @@ footer {
       }
     }
   }
+
   .form-contact {
     height: auto;
     padding-bottom: 30px;
-    form {
+
+    .contact-form-home {
       width: 100% !important;
     }
+
     .my-form-control {
       width: 90% !important;
     }
   }
+
   .copy {
     .logo-funun {
       text-align: right;
       width: 80%;
       float: right;
       margin-top: 15px;
+
       img {
         width: 30%;
       }
     }
   }
+
   .steps-clean {
     .card {
       margin-top: 50px;
+
       .line {
         display: none;
       }
     }
   }
+
   .what-papper {
     .list {
       ul {
@@ -1629,33 +1946,42 @@ footer {
       }
     }
   }
+
   .pricing-form {
-    form {
+    .pricing-form-page {
       padding: 15px;
       padding-top: 30px !important;
+
       .form-group {
         width: 100% !important;
       }
     }
   }
+
   .form-contact-page {
     .form-group {
       width: 100% !important;
     }
   }
+
   .pagination {
     width: 75% !important;
   }
-  .projects-page{
+
+  .projects-page {
     .tab-project {
       margin-top: 40px;
-      .col-sm-12, .col-md-6, .col-lg-4{
+
+      .col-sm-12,
+      .col-md-6,
+      .col-lg-4 {
         padding-left: 19px;
         padding-right: 19px;
       }
     }
   }
-  .project-inforamtion .project-information-content-data .data-info div:last-child{
+
+  .project-inforamtion .project-information-content-data .data-info div:last-child {
     margin-right: 130px;
   }
 }
@@ -1665,14 +1991,17 @@ footer {
     .top-header-information {
       ul {
         overflow: visible;
+
         .info {
           span {
             font-size: 12px;
           }
+
           i {
             margin-right: 4px;
           }
         }
+
         .social {
           span {
             a {
@@ -1695,17 +2024,21 @@ footer {
     .top-header-information {
       ul {
         overflow: visible;
+
         li {
           padding: 0;
         }
+
         .info {
           span {
             font-size: 12px;
           }
+
           i {
             margin-right: 4px;
           }
         }
+
         .social {
           span {
             a {
@@ -1721,7 +2054,8 @@ footer {
       }
     }
   }
-  .project-inforamtion .project-information-content-data .data-info div:last-child{
+
+  .project-inforamtion .project-information-content-data .data-info div:last-child {
     margin-right: 76px;
   }
 }
